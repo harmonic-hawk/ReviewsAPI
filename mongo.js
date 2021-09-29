@@ -20,7 +20,7 @@ const reviews = new mongoose.Schema({
   id: {type: Number, unique: true},
   review_id: {
     type: Schema.Types.ObjectId,
-    ref: 'Review'
+    ref: 'reviews'
   },
   url: String
 })
