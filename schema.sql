@@ -21,5 +21,21 @@ CREATE TABLE images(
   review_id INT NOT NULL,
   url VARCHAR(600) NOT NULL,
   FOREIGN KEY (review_id) REFERENCES reviews(id)
-)
+);
   
+CREATE TABLE meta(
+  id INT NOT NULL AUTO_INCREMENT,
+  product_id INT NOT NULL,
+  recommended INT NOT NULL,
+  FOREIGN KEY (product_id) REFERENCES reviews(product_id)
+);
+
+
+CREATE TABLE characteristics(
+  id INT NOT NULL,
+  product_id INT NOT NULL,
+  Size INT NOT NULL,
+  Width INT NOT NULL,
+  Comfort INT NOT NULL,
+  FOREIGN KEY (product_id) REFERENCES reviews(product_id)
+);
