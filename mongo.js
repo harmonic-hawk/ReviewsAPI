@@ -24,3 +24,27 @@ const reviews = new mongoose.Schema({
   },
   url: String
 })
+
+  
+  const meta = new mongoose.Schema({
+  id: {type: Number, unique: true},
+  review_id: {
+    type: Schema.Types.ObjectId,
+    ref: 'reviews'
+  },
+  url: String,
+  product_id: Number,
+  recommended: Number,
+})
+
+  const characteristics = new mongoose.Schema({
+  id: {type: Number, unique: true},
+  review_id: {
+    type: Schema.Types.ObjectId,
+    ref: 'meta'
+  },
+  size: Number,
+  product_id: Number,
+  Width: Number,
+  Comfort: Number
+})
