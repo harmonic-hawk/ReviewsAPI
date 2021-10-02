@@ -11,7 +11,7 @@ CREATE TABLE reviews (
   id INT NOT NULL AUTO_INCREMENT,
   product_id INT NOT NULL,
   rating INT NOT NULL,
-  date DATE NOT NULL,
+  date BIGINT NOT NULL,
   summary TEXT NOT NULL,
   body TEXT NOT NULL,
   recommend BOOLEAN NOT NULL,
