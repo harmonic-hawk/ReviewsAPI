@@ -8,7 +8,7 @@ use ratings_reviews;
 -- 1,1,5,1596080481467,“This product was great!“,”I really did or did not like this product based on whether it was sustainably sourced.  Then I found out that its made from nothing at all.“,true,false,“funtime”,“first.last@gmail.com”,null,8
 
 CREATE TABLE reviews (
-  id INT NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL,
   product_id INT NOT NULL,
   rating INT NOT NULL,
   date BIGINT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE reviews (
 -- 3,5,“https://images.unsplash.com/photo-1487349384428-12b47aca925e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80”
 
 CREATE TABLE images(
-  id INT NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL,
   review_id INT NOT NULL,
   url text NOT NULL,
   FOREIGN KEY (review_id) REFERENCES reviews(id),
@@ -55,7 +55,7 @@ CREATE TABLE characteristics(
 -- 3,3,1,5
 
 CREATE TABLE characteristics_reviews(
-  id INT NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL,
   characteristics_id INT NOT NULL,
   review_id INT NOT NULL,
   value INT,
