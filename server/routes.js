@@ -13,7 +13,7 @@ const controllers = require('./controllers');
 router.get('/reviews', controllers.reviews.get);
 
 // GET request that returns reviews metadata for a given product; product_id required query param
-router.get('/reviews/meta', (req, res) => { helpers.getReviewsMeta(req, res); });
+router.get('/reviews/meta', controllers.reviewsMeta.getMeta);
 
 // POST request that creates a new review; body should include: product_id, rating, summary, body,
 // recommend, name, email, photos, characteristics

@@ -1,0 +1,18 @@
+1.) install mysql on umbutu [DONE]
+2.) move over schema file 
+3.) create the database
+4.) move my csv files into my instance (30 minutes to research 30 minutes to try 30 minutes to work with chris longer reach out to staff)
+5.) load the data into the database from my csv files
+5.1) configure the database to connect via the internet
+6.) connect our server to the database
+
+LOW PRIORTY
+
+
+THE ISSUE:
+we insatlled  mysql on umbutu but the root user came with an unknown password
+
+Reset the password
+
+a config file with mysql grant tables that come with the permissions
+

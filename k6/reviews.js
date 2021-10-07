@@ -24,7 +24,7 @@ export default function() {
     const min = 1;
     const product_id = Math.round((Math.random() * (max - min)) + min);
 
-    let getReviews = http.get('http://localhost:5000/reviews');
+    let getReviews = http.get('http://localhost:5000/api/reviews/?product_id=49432&count=1');
     check (getReviews, {
       'is status 200' : (r) => r.status === 200,
       'is duration < 250ms': (r) => r.timings.duration < 250,

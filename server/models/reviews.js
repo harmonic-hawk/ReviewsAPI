@@ -3,7 +3,8 @@ const db = require('../db');
 module.exports = {
   getReviews: (data, callback) => {
     const {product_id, count} = data
-    db.query(`SELECT * FROM reviews LEFT JOIN review_photos ON review_id = reviews.id WHERE product_id=${product_id} limit ${count}`, (err, results) => {
+    db.query(`SELECT reviews.id, rating, summary, recommend, response, body, date, reviewer_name, helpfulness, JSON_OBJECTAGG( 'photos',
+        JSON_ARRAY('id', review_photos.id, 'url', review_photos.url ))FROM reviews LEFT JOIN review_photos ON review_id = reviews.id WHERE product_id=${product_id} GROUP BY reviews.id limit ${count}`, (err, results) => {
       if (err) {
         callback(err);
       } else {
