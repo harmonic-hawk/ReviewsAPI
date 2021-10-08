@@ -1,5 +1,5 @@
 1.) install mysql on umbutu [DONE]
-2.) move over schema file 
+2.) move over schema file
 3.) create the database
 4.) move my csv files into my instance (30 minutes to research 30 minutes to try 30 minutes to work with chris longer reach out to staff)
 5.) load the data into the database from my csv files
@@ -16,3 +16,7 @@ Reset the password
 
 a config file with mysql grant tables that come with the permissions
 
+
+scp -i SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@ec2-54-219-120-151.us-west-1.compute.amazonaws.com:/Users/juanvmeji/Desktop/SDC/reviews.csv
+
+$scp -i SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@ec2-54-219-120-151.us-west-1.compute.amazonaws.com:~/CSVDATA
