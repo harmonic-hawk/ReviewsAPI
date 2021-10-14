@@ -28,7 +28,7 @@ CREATE TABLE reviews (
 -- 2,5,“https://images.unsplash.com/photo-1561693532-9ff59442a7db?ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80”
 -- 3,5,“https://images.unsplash.com/photo-1487349384428-12b47aca925e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80”
 
-CREATE TABLE images(
+CREATE TABLE review_photos(
   id INT NOT NULL,
   review_id INT NOT NULL,
   url text NOT NULL,
@@ -56,10 +56,14 @@ CREATE TABLE characteristics(
 
 CREATE TABLE characteristics_reviews(
   id INT NOT NULL,
-  characteristics_id INT NOT NULL,
+  characteristic_id INT NOT NULL,
   review_id INT NOT NULL,
   value INT,
   FOREIGN KEY (review_id) REFERENCES reviews(id),
-  FOREIGN KEY (characteristics_id) REFERENCES characteristics(id),
+  FOREIGN KEY (characteristic_id) REFERENCES characteristics(id),
   PRIMARY KEY(id)
   );
+
+  CREATE INDEX product_id_index ON reviews (product_id);
+  CREATE INDEX review_id ON reviews (review_id);
+  CREATE INDEX characteristic_id ON characteristics (id)

@@ -1,4 +1,4 @@
-LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews.csv'
+LOAD DATA LOCAL INFILE '/home/ubuntu/CSVDATA/reviews.csv'
  INTO TABLE reviews
  FIELDS TERMINATED BY ','
  ENCLOSED BY '"'
@@ -7,7 +7,7 @@ LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews.csv'
  ;
 
 
- LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews_photos.csv'
+ LOAD DATA LOCAL INFILE '/home/ubuntu/CSVDATA/reviews_photos.csv'
  INTO TABLE review_photos
  FIELDS TERMINATED BY ','
  ENCLOSED BY '"'
@@ -16,8 +16,8 @@ LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews.csv'
  ;
 
 
- LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/characteristic_reviews.csv'
- INTO TABLE characteristic_reviews
+ LOAD DATA LOCAL INFILE '/home/ubuntu/CSVDATA/characteristic_reviews.csv'
+ INTO TABLE characteristics_reviews
  FIELDS TERMINATED BY ','
  ENCLOSED BY '"'
  LINES TERMINATED BY '\n'
@@ -25,7 +25,7 @@ LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews.csv'
  ;
 
 
- LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/characteristics.csv'
+ LOAD DATA LOCAL INFILE '/home/ubuntu/CSVDATA/characteristics.csv'
  INTO TABLE characteristics
  FIELDS TERMINATED BY ','
  ENCLOSED BY '"'
@@ -34,3 +34,6 @@ LOAD DATA LOCAL INFILE '/Users/juanvmeji/Desktop/SDC/reviews.csv'
  ;
 
  \copy characteristics_reviews(id, characteristics_id, review_id, value) FROM '/Users/juanvmeji/Desktop/SDC/characteristics.csv' DELIMITER ',' CSV HEADER;
+
+ characteristic_reviews.csv
+ characteristic_reviews.csv

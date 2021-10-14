@@ -19,4 +19,15 @@ a config file with mysql grant tables that come with the permissions
 
 scp -i SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@ec2-54-219-120-151.us-west-1.compute.amazonaws.com:/Users/juanvmeji/Desktop/SDC/reviews.csv
 
-$scp -i SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@ec2-54-219-120-151.us-west-1.compute.amazonaws.com:~/CSVDATA
+scp -i SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@ec2-54-219-120-151.us-west-1.compute.amazonaws.com:~/CSVDATA
+
+scp -i /Users/juanvmeji/Desktop/PEMKEYS/SDC.pem /Users/juanvmeji/Desktop/SDC/reviews.csv ubuntu@54.219.172.37:~/CSVDATA/
+
+scp -i /Users/juanvmeji/Desktop/PEMKEYS/SDC.pem /Users/juanvmeji/Desktop/SDC/reviews_photos.csv ubuntu@54.219.172.37:~/CSVDATA/
+
+scp -i /Users/juanvmeji/Desktop/PEMKEYS/SDC.pem /Users/juanvmeji/Desktop/SDC/characteristics.csv ubuntu@54.219.172.37:~/CSVDATA/
+
+scp -i /Users/juanvmeji/Desktop/PEMKEYS/SDC.pem /Users/juanvmeji/Desktop/SDC/characteristic_reviews.csv ubuntu@54.219.172.37:~/CSVDATA/
+
+
+Resarech seeting up foregin connections
